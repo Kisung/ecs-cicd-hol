@@ -141,4 +141,4 @@
 
 ## [메인페이지로 돌아가기](../README.md)
 
-## [이전: ECS 클러스터 생성하기](create-ecs-cluster.md)
+## [이전: ECR 리포지토리에 nginx 도커 이미지 푸쉬하기](create-ecr-repository.md)
