@@ -16,14 +16,14 @@
 - [What is Amazon Elastic Container Registry?](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html)
 - [What Is AWS CodePipeline?](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html)
 
-## Cloudformation Template을 이용
+## Cloudformation Template을 이용한 자원 생성
 본 실습을 시작하기 전에 필요한 AWS 리소스를 생성해야 합니다. 실습에 필요한 리소스는 AWS CloudFormation을 사용하여 구성합니다.
 
 실습에 필요한 AWS 리소스를 사전에 생성하기 위해 제공된 CloudFormation template을 사용하여 CloudFormation stack을 생성합니다. 스택을 생성하면 실습에 사용할 VPC 리소스, ECS Cluster인스턴스와 Dockerfile 작성을 위한 Amazon Cloud9, Codecommit 등이 생성 됩니다. 이 모든 리소스는 ECS Hands On Lab을 진행하는 데 필요합니다.
 
 CloudFormation 스택을 시작하려면, Launch Stack 버튼 을 클릭해서 CloudFormation 콘솔로 이동합니다.
 
-[Cloudformation Stack](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=ecs-hol&templateURL=https://github.com/mz-etc-hol/ecs-cicd-hol/blob/master/demo/ecs-workshop-stack.yaml)
+[Cloudformation Stack](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=ecs-hol&templateURL=https://mzc-etc-hol.s3-us-west-2.amazonaws.com/ecs-workshop-stack.yaml)
 
 생성되는 리소스:
 - VPC
