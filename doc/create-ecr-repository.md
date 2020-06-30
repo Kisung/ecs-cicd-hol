@@ -1,8 +1,8 @@
-# ECR 리포지토리 생성하기
+# ECR 리포지토리에 nginx 도커 이미지 푸쉬하기
 
-> 도커 이미지를 Amazon ECR에 푸시하려면 먼저 이를 저장할 리포지토리를 생성해야 합니다. AWS Management 콘솔 또는 AWS CLI 및 AWS SDK를 사용하여 Amazon ECR 리포지토리를 만들 수 있습니다.
+> 도커 이미지를 Amazon ECR에 푸시하려면 먼저 이를 저장할 리포지토리가 생성되어야 합니다. 우리는 Cloudformation을 이용하여 webapphol이라는 Container Repository를 생성했습니다. AWS Management 콘솔 또는 AWS CLI 및 AWS SDK를 사용하여 Amazon ECR 리포지토리를 만들 수 있습니다. 
 
-## ECR 리포지토리에 생성하기
+## ECR 리포지토리 확인
 
 1. [https://console.aws.amazon.com/ecr/repositories](https://console.aws.amazon.com/ecr/repositories) 에서 Amazon ECR 콘솔을 엽니다.
 
@@ -10,13 +10,12 @@
 
 3. 탐색 창에서 Repositories를 선택합니다.
 
-4. Repositories 페이지에서 Create repository를 선택합니다.
+4. Repositories 페이지에서 생성된 repository를 선택합니다.
 
-5. 리포지토리 구성에 리포지토리의 이름의 / 뒤에 **containerhol/webapphol** 라고 입력을 하고 리포지토리 생성을 선택합니다.
 
-## ECR 리포지토리에 nginx 도커 이미지 푸쉬하기
+## ECR 리포지토리에 도커 이미지 푸쉬하기
 
-1. 생성한 리포지토리를 선택하고 오른쪽 상단의 **View push commands(푸시 명령 보기)** 를 선택하여 새 리포지토리에 푸시하는 단계를 봅니다. 다음과 같은 화면을 볼 수 있습니다.
+1. 선택한 리포지토리 오른쪽 상단의 **View push commands(푸시 명령 보기)** 를 선택하여 새 리포지토리에 푸시하는 단계를 봅니다. 다음과 같은 화면을 볼 수 있습니다.
 
     ![Alt](../images/ecr/view-push-commands.png "generate git credential")
 
@@ -58,7 +57,7 @@
     latest: digest: sha256:079aa93463d2566b7a81cbdf856afc6d4d2a6f9100ca3bcbecf24ade92c9a7fe size: 948
     ```
 
-## [다음: ECR 클러스터를 위한 VPC 생성하기](create-vpc.md)
+## [다음: Task Definition 작성하기](create-task-definition.md)
 
 ## [메인페이지로 돌아가기](../README.md)
 
