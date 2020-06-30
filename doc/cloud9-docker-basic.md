@@ -132,4 +132,3 @@ docker rmi mynginx:latest
 
 ## [메인페이지로 돌아가기](../README.md)
 
-## [이전: IAM 유저 생성하기](create-a-workspace.md)
