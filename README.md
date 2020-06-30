@@ -16,56 +16,73 @@
 - [What is Amazon Elastic Container Registry?](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html)
 - [What Is AWS CodePipeline?](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html)
 
-## Cloud 9 셋업하기 및 ECR 레포지토리 생성하기 ( 40분 소요 )
+## Cloudformation Template을 이용
+본 실습을 시작하기 전에 필요한 AWS 리소스를 생성해야 합니다. 실습에 필요한 리소스는 AWS CloudFormation을 사용하여 구성합니다.
 
-이 단락에서는 AWS의 Web IDE인 Cloud9 워크 스페이스를 생성하고 Elastic Container Registry 서비스를 이용하여 컨테이너 이미지들을 저장할 Image Registry를 등록합니다. 또한 컨테이너를 배포할 ECS 클러스터를 위한 VPC를 생성합니다. 이번 단락에서는 Docker의 기본적인 명령어에 익숙해지는 데에 집중을 하고 다음 단락에서 만들 ECS 클러스터의 치고가 될 VPC를 준비해둡니다.
+실습에 필요한 AWS 리소스를 사전에 생성하기 위해 제공된 CloudFormation template을 사용하여 CloudFormation stack을 생성합니다. 스택을 생성하면 실습에 사용할 VPC 리소스, ECS Cluster인스턴스와 Dockerfile 작성을 위한 Amazon Cloud9, Codecommit 등이 생성 됩니다. 이 모든 리소스는 ECS Hands On Lab을 진행하는 데 필요합니다.
 
-아래의 항목들을 차례대로 수행합니다.
+CloudFormation 스택을 시작하려면, Launch Stack 버튼 을 클릭해서 CloudFormation 콘솔로 이동합니다.
+
+[Cloudformation Stack](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=ecs-hol&templateURL=https://github.com/mz-etc-hol/ecs-cicd-hol/blob/master/demo/ecs-workshop-stack.yaml)
+
+생성되는 리소스:
+- VPC
+- IGW
+- Subnet1, Subnet2
+- Default Security Group 설정
+- Amazon Cloud9
+- Amazon ECR
+- AWS CodeCommit
+- Amazon ECS Cluster
+
+![stack image1](images/stack1.png "create set1")
+![stack image2](images/stack2.png "create set2")
+![stack image3](images/stack3.png "create set3")
+![stack image4](images/stack4.png "create set4")
+
+
+
+## Cloud 9 셋업하기 및 ECR 레포지토리에 이미지 푸시하기 ( 10분 소요 )
+
+이 단락에서는 AWS의 Web IDE인 Cloud9 워크 스페이스를 생성하고 Elastic Container Registry 서비스를 이용하여 컨테이너 이미지들을 저장할 Image Registry를 등록합니다. 또한 컨테이너를 배포할 ECS 클러스터를 위한 VPC를 생성합니다. 이번 단락에서는 Docker의 기본적인 명령어를 확인 합니다.
+
 
 1. [Cloud9으로 Docker 기초 실습하기](doc/cloud9-docker-basic.md)
 
-2. [ECR 에 도커 이미지를 위한 리포지토리 생성하기](doc/create-ecr-repository.md)
+2. [ECR 리포지토리에 nginx 도커 이미지 푸쉬하기](doc/create-ecr-repository.md)
 
-3. [ECR 클러스터를 위한 VPC 생성하기](doc/create-vpc.md)
 
-## ECS 클러스터 생성 및 Task Definition / Service 등록하기 (50분 ~ 1시간 소요)
+## ECS 클러스터 생성 및 Task Definition / Service 등록하기 (30분 ~ 45분 소요)
 
-이 단락에서는 컨테이너를 배포할 ECS 클러스터를 생성합니다. ECS의 배포 단위인 Task에 맞춰서 Task Definition을 정의하고 그를 이용하여 ECS에 Task를 배포하는 Service를 정의합니다. 이를 통해서 nginx 웹서버를 ECS 클러스터상에 배포하여 실제로 동작을 확인합니다.
+이 단락에서는 ECS의 배포 단위인 Task에 맞춰서 Task Definition을 정의하고 그를 이용하여 ECS에 Task를 배포하는 Service를 정의합니다. 이를 통해서 nginx 웹서버를 ECS 클러스터상에 배포하여 실제로 동작을 확인합니다.
 
-1. [ECS 클러스터 생성하기](doc/create-ecs-cluster.md)
-
-2. [Task Definition 작성하기](doc/create-task-definition.md)
+1. [Task Definition 작성하기](doc/create-task-definition.md)
 
 3. [Service에서 사용할 Application Load Balancer 생성하기](doc/create-alb.md)
 
 4. [Service 작성하여 서비스 배포하기](doc/create-service.md)
 
-## Code Commit, Code Build, Code Pipeline으로 CI/CD 파이프라인 구성하기 ( 50분 ~ 1시간 소요)
+
+## Code Commit, Code Build, Code Pipeline으로 CI/CD 파이프라인 구성하기 ( 30분 ~ 45분 소요)
 
 이 단락에서는 형상의 소스들을 지속적으로 배포하고 빌드하여 ECR에 푸쉬하고 ECR cluster 상의 task들을 지속적으로 배포하기 위한 파이프라인을 생성합니다. AWS의 완전 관리형 Git repository인 Code Commit에 형상 저장소를 만들고 지속적인 빌드를 위하여 Dokcerfile 및 buildspec.yml을 작성하여 형상에 커밋합니다. 그리고 Code Pipeline에서 생성한 파이프라인으로 앞에서 생성한 ECS의 클러스터상의 Service를 업데이트하여 지속적인 배포를 수행합니다.
 
  아래의 항목들을 차례대로 수행합니다.
 
-1. [Code Commit에 Git Repository 생성하고 Cloud9에 형상 clone 하기](doc/create-codecommit-repo.md)
+1. [Code Commit의 Git Repository 확인 및 Cloud9에 형상 clone 하기](doc/create-codecommit-repo.md)
 
 2. [Code Commit Repository에 Dockefile 및 buildspec.yaml 추가하기](doc/create-resource-for-build.md)
 
 3. [Cope Pipeline을 생성하여 ECS에 지속적인 배포하기](doc/create-pipeline.md)
 
-## 실습후 리소스 삭제하기 (Event Engine으로 진행했을 경우에는 생략)
+## 실습후 리소스 삭제하기
 
-> Event Engine을 통해서 실습을 한 경우에는 리소스들을 삭제할 필요가 없습니다. 이 랩을 진행하는 SA가 직접 모든 리소스들을 삭제합니다.
+> 실습후 반드시 리소스들을 삭제합니다. 제대로 삭제를 하지 않는다면 실습하신분의 계정으로 요금이 청구될 수 있습니다. 실습때 받은 credit이 있다면 등록을 해주시길 바랍니다.
 
-> 실습후 반드시 리소스들을 삭제합니다. 제대로 삭제를 하지 않는 다면 귀하의 계정으로 요금이 청구될 수 있습니다. 실습때 받은 credit이 있다면 등록을 해주시길 바랍니다.
-
-1. ALB 삭제
-2. Target Group 삭제
-3. ECS 서비스 삭제
-4. ECS Task Definition 삭제
-5. ECS 클러스터 삭제
-6. ECR 이미지 레지스트리 삭제
-7. Code Pipeline 삭제
-8. Code commit 리포지토리 삭제
-9. Code build 프로젝트 삭제
-10. Cloud9 워크스페이스 삭제
-11. VPC 삭제
+1. Codepipeline 삭제
+2. ECS Service 삭제
+3. ECS Task Definition 삭제 (Task Definition 안의 버젼?을 등록해제하면 삭제됩니다.)
+4. ALB 삭제
+5. Target Group 삭제
+6. ECR 삭제
+7. Cloudformaion 스택 삭제
