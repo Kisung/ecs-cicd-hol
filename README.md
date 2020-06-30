@@ -1,18 +1,6 @@
 # CICD for ECS Hands On LAB
 
-> **본 Hands on Lab은 SEOUL region( oregon ) 을 기준으로 작성되었습니다. 실습을 하실 때 반드시 리전을 확인하기 바랍니다.**
-
-## Prerequisites
-
-본격적으로 실습을 시작하기에 앞서 준비작업이 필요합니다. 아래의 1,2번 항목을 차례로 따라서 실행하고 다시 이 페이지로 돌아옵니다.
-
-1. [IAM 유저 생성하기](doc/create-iam-user.md)
-
-2. [워크스페이스 생성하기](doc/create-a-workspace.md)
-
-3. (선택사항) [워크스페이스를 위한 IAM 역할 생성하기](doc/create-an-iam-role-for-your-workspace.md)
-
-4. (선택사항) [워크스페이스에 IAM 역할 추가하기](doc/attach-the-iam-role-to-your-workspace.md)
+> **본 Hands on Lab은 Oregon region( us-weat-2 ) 을 기준으로 작성되었습니다. 실습을 하실 때 반드시 리전을 확인하기 바랍니다.**
 
 ## Overall Archtecture
 
