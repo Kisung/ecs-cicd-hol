@@ -115,7 +115,7 @@
     - git crendential을 저장하기 위하여 다음과 같이 user name과 email을 글로벌로 설정합니다.
 
     ```bash
-    git config --global user.name "Kwangyoung Kim"
+    git config --global user.name "kildong Hong"
     git config --global user.email "example@amazon.com"
     ```
 
@@ -156,4 +156,4 @@
 
 ## [메인페이지로 돌아가기](../README.md)
 
-## [이전: Code Commit에 Git Repository 생성하고 Cloud9에 형상 clone 하기](create-codecommit-repo.md)
+## [이전: Code Commit의 Git Repository 확인 및 Cloud9에 형상 clone 하기](create-codecommit-repo.md)
