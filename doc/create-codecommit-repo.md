@@ -13,7 +13,7 @@
 
 1. AWS Management 콘솔에 로그인한 [다음 링크를 클릭해서 IAM 콘솔을 엽니다](https://console.aws.amazon.com/iam/). CodeCommit 접속을 위해 Git 자격 증명을 생성 및 사용할 IAM 사용자로 로그인해야 합니다.
 
-2. IAM 콘솔의 탐색 창에서 Users(사용자)를 선택하고 사용자 목록에5. 서 해당 IAM 사용자 기존에 작성하셨던 유저명 혹은 **containerhol-admin** 을 선택합니다.
+2. IAM 콘솔의 탐색 창에서 Users(사용자)를 선택하고 사용자 목록에서 해당 IAM 사용자 기존에 작성하셨던 유저명 혹은 **containerhol-admin** 을 선택합니다.
 
 3. AWS CodeCommit 자격 증명 탭을 선택합니다. 그리고 하단에 있는 Generate Git Credentials 버튼을 클립합니다.
 
