@@ -14,7 +14,7 @@
     다음과 같이 출력이 됩니다.
 
     ```bash
-    ls -al
+    $ ls -al
     total 20
     drwxr-xr-x  4 ec2-user ec2-user 4096 Jun 17 04:39 .
     drwx------ 15 ec2-user ec2-user 4096 Jun 17 04:29 ..
@@ -134,7 +134,6 @@
     - 커밋을 푸시합니다. 앞에서 Code Commit 리포지토리를 만들때 다운로드 받아뒀던 csv 파일을 참조하여 유저네임과 패스워드를 입력합니다.
 
     ```bash
-    git config credential.helper store
     git push origin master
     ```
 
