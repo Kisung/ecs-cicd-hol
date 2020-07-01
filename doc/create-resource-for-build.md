@@ -62,7 +62,7 @@
     RUN cp /index.html /usr/share/nginx/html
     ```
 
-7. 5에서 했던 방법으로 **buildspec.yml" 파일을 추가합니다.
+7. 5에서 했던 방법으로 **buildspec.yml** 파일을 추가합니다.
 
     > 대소문자에 유의해서 입력합니다. 파일명은 **buildspec.yml** 입니다.
 
