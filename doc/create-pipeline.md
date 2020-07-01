@@ -31,11 +31,11 @@
     - Build provider: **AWS CodeBuild**
     - Region: **US West - (Oregon)**
     - Project name 오른쪽의 Create a new build project를 선택합니다. 빌드 프로젝트 생성시에는 다음과 같이 입력 및 선택을 하고 나머지는 디폴트로 둡니다
-        - Project Name: hol-build
+        - Project Name: **hol-build**
         - Environment Image: **Managed Image**
         - Operating System: **Ubuntu**
         - Runtime: **Standard**
-        - Image: **aws/codebuild/standard:1.0**
+        - Image: **aws/codebuild/standard:3.0**
         - **Privileged 옵션 체크**
         > Privileged 옵셥을 체크하지 않는다면 Code build에서 도커 이미지를 빌드할 수 없습니다
         - Continue to CodePipeline 버튼을 누릅니다
