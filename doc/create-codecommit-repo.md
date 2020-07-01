@@ -6,25 +6,6 @@
 
 3. 생성된 내용을 확인합니다.
 
-
-## Code Commit에서 사용할 HTTPS Git Credential(자격증명) 생성하기
-
-> CodeCommit에 엑세스하기 위한 IAM 사용자를 생성 및 구성합니다. [아직 사용자에게 IAM 역할을 부여하지 않았다면 다음의 링크를 클릭하여 사전준비 사항을 수행하도록 합니다.](./../README#Prerequisites) 이 실습에서는 새롭게 생성한 사용자에게 Administrator Access를 부여하였기 때문에 CodeCommit에 대한 Access를 따로 추가하지 않아도 됩니다.
-
-1. AWS Management 콘솔에 로그인한 [다음 링크를 클릭해서 IAM 콘솔을 엽니다](https://console.aws.amazon.com/iam/). CodeCommit 접속을 위해 Git 자격 증명을 생성 및 사용할 IAM 사용자로 로그인해야 합니다.
-
-2. IAM 콘솔의 탐색 창에서 Users(사용자)를 선택하고 사용자 목록에서 해당 IAM 사용자 기존에 작성하셨던 유저명 혹은 **containerhol-admin** 을 선택합니다.
-
-3. AWS CodeCommit 자격 증명 탭을 선택합니다. 그리고 하단에 있는 Generate Git Credentials 버튼을 클립합니다.
-
-     ![Alt](../images/iam/generate-git-credential.png "generate git credential")
-
-4. IAM이 생성한 사용자 이름과 암호를 복사하는 방법은 로컬 컴퓨터에 있는 안전한 파일에 표시, 복사 후 붙여넣기하거나 자격 증명 다운로드를 선택하여 .CSV 파일로 이 정보를 다운로드하는 두 가지가 있습니다. CodeCommit에 접속하려면 이 정보가 필요합니다. Download credentials 버튼을 눌러서 CSV 파일로 저장해두록 합니다.
-
-    ![Alt](../images/iam/download-git-credential.png "generate git credential")
-
-     > **이때가 사용자 이름과 암호를 저장할 수 있는 유일한 기회입니다.** 이 정보를 저장하지 않는 경우, 사용자 이름은 IAM 콘솔에서 복사할 수 있지만 암호는 찾을 수 없습니다. 그러므로 암호를 재설정한 후 저장해야 합니다.
-
 ## CodeCommit 콘솔 연결 및 리포지토리 복제
 
 1. [https://console.aws.amazon.com/codesuite/codecommit/home](https://console.aws.amazon.com/codesuite/codecommit/home) 에서 CodeCommit 콘솔을 엽니다.
