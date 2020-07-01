@@ -29,21 +29,26 @@ CloudFormation 스택을 시작하려면, Launch Stack 버튼 을 클릭해서 C
 ### Create stack 화면
 
 ![stack image1](images/cloudformation/01.create_stack.png "create stack")
-Template경로가 Amazon S3인지 확인 후 "Next" 
+Template경로가 Amazon S3인지 확인 후 **"Next"** 
 
 
 ### Stack 이름 확인 및 기본 파라메터 설정
 
 ![stack image2](images/cloudformation/02.stack_name.png "stack name")
 
-Configure stack options 화면에서 기본 설정을 유지하고 "Next"
-Review ecs-hol 화면에서 기본 설정을 유지하고 
+Configure stack options 화면에서 기본 설정을 유지하고 **"Next"**
+
+Review ecs-hol 화면에서 기본 설정을 유지하고 **"Next"** 
 
 ### Stack 설정 내용 리뷰 및 Stack 생성
-![stack image2](images/cloudformation/03.capabilities.png "review stack")
+![stack image3](images/cloudformation/03.capabilities.png "review stack")
 
-화면 하단의 "Capabilities" 영역에서 "I acknowledge that AWS CloudFormation might create IAM resources." 체크하고 "Create stack" 버튼 클릭
-"ecs-hol" 스택의 "Status"가 CREATE_IN_PROGRESS에서 CREATE_COMPLETE으로 완료될때까지 기다려 주십시오.(예상시간 10분 <) 
+화면 하단의 "Capabilities" 영역에서 클라우드포메이션이 IAM 리소스생성하는것에 대한 승인여부를 체크하고 **"Create stack"** 버튼 클릭합니다.
+
+
+![stack_image4](images/cloudformation/04.stack_detail.png "stack detail")
+
+ecs-hol 스택의 상세화면으로 전환되고, 스택의 Status가 **CREATE_IN_PROGRESS**에서 **CREATE_COMPLETE**으로 완료될때까지 기다려 주십시오.(예상시간 10분 <) 
 
 생성되는 리소스는 다음과 같습니다.:
 
