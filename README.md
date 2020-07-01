@@ -25,11 +25,15 @@ CloudFormation 스택을 시작하려면, Launch Stack 버튼 을 클릭해서 C
 
 - [Launch Stack (us-west-2)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=ecs-hol&templateURL=https://mzc-etc-hol.s3-us-west-2.amazonaws.com/ecs-workshop-stack.yaml)
 
+
 ### Create stack 화면
+
 ![stack image1](images/cloudformation/01.create_stack.png "create stack")
 Template경로가 Amazon S3인지 확인 후 "Next" 
 
+
 ### Stack 이름 확인 및 기본 파라메터 설정
+
 ![stack image2](images/cloudformation/02.stack_name.png "stack name")
 
 Configure stack options 화면에서 기본 설정을 유지하고 "Next"
@@ -93,7 +97,7 @@ Review ecs-hol 화면에서 기본 설정을 유지하고
 
 1. Codepipeline 삭제
 2. ECS Service 삭제
-3. ECS Task Definition 삭제 (Task Definition 안의 버젼?을 등록해제하면 삭제됩니다.)
+3. ECS Task Definition 삭제 (Task Definition 안의 버젼을 등록해제하면 삭제됩니다.)
 4. ALB 삭제
 5. Target Group 삭제
 6. ECR 삭제
