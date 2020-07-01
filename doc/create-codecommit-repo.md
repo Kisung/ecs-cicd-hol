@@ -32,7 +32,7 @@
      git clone https://git-codecommit.us-west-2.amazonaws.com/v1/repos/containerhol
      ```
 
-8. Code Commit에서 사용할 HTTPS Git Credential(자격증명) 생성하기 항목에서 생성한 Git Credential 파일을 열어서 User Name과 Password를 보고 터미털에 복사해서 붙여넣기 합니다. 정상적으로 입력했다면 다음과 같은 화면을 볼 수 있습니다.
+8. 정상적으로 입력했다면 다음과 같은 화면을 볼 수 있습니다.
 
      ```bash
      warning: You appear to have cloned an empty repository.

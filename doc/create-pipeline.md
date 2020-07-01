@@ -96,10 +96,9 @@
     git commit -am "modify html"
     ```
 
-   - 커밋을 푸시합니다. 앞에서 Code Commit 리포지토리를 만들때 다운로드 받아뒀던 csv 파일을 참조하여 유저네임과 패스워드를 입력합니다.
+   - 커밋을 푸시합니다.
     
     ```bash
-    git config credential.helper store
     git push origin master
     ```
 
