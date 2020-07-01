@@ -10,7 +10,7 @@
 
 3. 탐색 창에서 Repositories를 선택합니다.
 
-4. Repositories 페이지에서 생성된 repository를 선택합니다.
+4. Repositories 페이지에서 생성된 **"containerhol/webapphol"** Repository를 선택합니다.
 
 
 ## ECR 리포지토리에 도커 이미지 푸쉬하기
@@ -28,6 +28,7 @@
     ```bash
     $(aws ecr get-login --no-include-email --region us-west-2)
     ```
+
 
 3. 다음으로는 docker hub에서 cloud9의 워크스페이스에 nginx 도커이미지를 내려받습니다.
 
