@@ -23,9 +23,12 @@
 
 CloudFormation 스택을 시작하려면, Launch Stack 버튼 을 클릭해서 CloudFormation 콘솔로 이동합니다.
 
-[Cloudformation Stack](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=ecs-hol&templateURL=https://mzc-etc-hol.s3-us-west-2.amazonaws.com/ecs-workshop-stack.yaml)
+- [Launch Stack (us-west-2)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=ecs-hol&templateURL=https://mzc-etc-hol.s3-us-west-2.amazonaws.com/ecs-workshop-stack.yaml)
 
 생성되는 리소스:
+
+![stack architecture](images/overall-architecture-cfn.png "stack architecture")
+
 - VPC
 - IGW
 - Subnet1, Subnet2
