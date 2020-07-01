@@ -25,7 +25,23 @@ CloudFormation 스택을 시작하려면, Launch Stack 버튼 을 클릭해서 C
 
 - [Launch Stack (us-west-2)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=ecs-hol&templateURL=https://mzc-etc-hol.s3-us-west-2.amazonaws.com/ecs-workshop-stack.yaml)
 
-생성되는 리소스:
+### Create stack 화면
+![stack image1](images/cloudformation/01.create_stack.png "create stack")
+Template경로가 Amazon S3인지 확인 후 "Next" 
+
+### Stack 이름 확인 및 기본 파라메터 설정
+![stack image2](images/cloudformation/02.stack_name.png "stack name")
+
+Configure stack options 화면에서 기본 설정을 유지하고 "Next"
+Review ecs-hol 화면에서 기본 설정을 유지하고 
+
+### Stack 설정 내용 리뷰 및 Stack 생성
+![stack image2](images/cloudformation/03.capabilities.png "review stack")
+
+화면 하단의 "Capabilities" 영역에서 "I acknowledge that AWS CloudFormation might create IAM resources." 체크하고 "Create stack" 버튼 클릭
+"ecs-hol" 스택의 "Status"가 CREATE_IN_PROGRESS에서 CREATE_COMPLETE으로 완료될때까지 기다려 주십시오.(예상시간 10분 <) 
+
+생성되는 리소스는 다음과 같습니다.:
 
 ![stack architecture](images/overall-architecture-cfn.png "stack architecture")
 
@@ -38,17 +54,10 @@ CloudFormation 스택을 시작하려면, Launch Stack 버튼 을 클릭해서 C
 - AWS CodeCommit
 - Amazon ECS Cluster
 
-![stack image1](images/stack1.png "create set1")
-![stack image2](images/stack2.png "create set2")
-![stack image3](images/stack3.png "create set3")
-![stack image4](images/stack4.png "create set4")
-
-
 
 ## Cloud 9 셋업하기 및 ECR 레포지토리에 이미지 푸시하기 ( 10분 소요 )
 
 이 단락에서는 AWS의 Web IDE인 Cloud9 워크 스페이스를 생성하고 Elastic Container Registry 서비스를 이용하여 컨테이너 이미지들을 저장할 Image Registry를 등록합니다. 또한 컨테이너를 배포할 ECS 클러스터를 위한 VPC를 생성합니다. 이번 단락에서는 Docker의 기본적인 명령어를 확인 합니다.
-
 
 1. [Cloud9으로 Docker 기초 실습하기](doc/cloud9-docker-basic.md)
 
