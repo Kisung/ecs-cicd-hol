@@ -19,7 +19,7 @@
 6. 위의 항목을 입력하고 다음 버튼을 눌러 Configure Network 페이지에서 다음의 항목을 아래와 같이 입력합니다. 나머지는 디폴트로 내버려 둡니다.
 
     - Cluster VPC: ContainerHOL
-    - Subnets: HolSubnetA, HolSubnetB
+    - Subnets: HolSubnet1, HolSubnet2
     - Security Groups: ContainerHOL VPC의 디폴트 Security Group 선택
     - Load balancer type: Application Load Balancer
     - Load balancer name: hol-alb
