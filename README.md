@@ -6,7 +6,7 @@
 
 본 HOL통해서 아래와 같은 아키텍처를 구성합니다. 이번 실습을 통하여 AWS상의 VPC위에 EC2기반의 ECS 클러스터를 생성하고 nginx컨테이너를 ECS클러스터 위에 배포합니다. 이를 위해서 ECS클러스터를 위한 Task definition 및 Service 를 생성하고 Code Pipeline으로 파이프라인을 생성하여 지속적으로 소스를 빌드하고 배포합니다.
 
-![Alt](images/hol-ecs-2.png "create pipe")
+![Overall](images/hol-ecs-2.png)
 
 추가적으로 각 구성요소에 대한 상세한 내용을 알고 싶으시다면 다음의 리소소들을 참조해주세요.
 
@@ -28,31 +28,31 @@ CloudFormation 스택을 시작하려면, Launch Stack 버튼 을 클릭해서 C
 
 ### Create stack 화면
 
-![stack image1](images/cloudformation/01.create_stack.png "create stack")
+![stack image1](images/cloudformation/01.create_stack.png)
 Template경로가 Amazon S3인지 확인 후 **"Next"** 
 
 
 ### Stack 이름 확인 및 기본 파라메터 설정
 
-![stack image2](images/cloudformation/02.stack_name.png "stack name")
+![stack image2](images/cloudformation/02.stack_name.png)
 
 Configure stack options 화면에서 기본 설정을 유지하고 **"Next"**
 
 Review ecs-hol 화면에서 기본 설정을 유지하고 **"Next"** 
 
 ### Stack 설정 내용 리뷰 및 Stack 생성
-![stack image3](images/cloudformation/03.capabilities.png "review stack")
+![stack image3](images/cloudformation/03.capabilities.png)
 
 화면 하단의 "Capabilities" 영역에서 클라우드포메이션이 IAM 리소스생성하는것에 대한 승인여부를 체크하고 **"Create stack"** 버튼 클릭합니다.
 
 
-![stack_image4](images/cloudformation/04.stack_detail.png "stack detail")
+![stack_image4](images/cloudformation/04.stack_detail.png)
 
 ecs-hol 스택의 상세화면으로 전환되고, 스택의 Status가 **CREATE_IN_PROGRESS**에서 **CREATE_COMPLETE**으로 완료될때까지 기다려 주십시오.(예상시간 10분 <) 
 
 생성되는 리소스는 다음과 같습니다.:
 
-![stack architecture](images/overall-architecture-cfn.png "stack architecture")
+![stack architecture](images/overall-architecture-cfn.png)
 
 - VPC
 - IGW
@@ -67,6 +67,8 @@ ecs-hol 스택의 상세화면으로 전환되고, 스택의 Status가 **CREATE_
 ## Cloud 9 셋업하기 및 ECR 레포지토리에 이미지 푸시하기 ( 10분 소요 )
 
 이 단락에서는 AWS의 Web IDE인 Cloud9 워크 스페이스를 생성하고 Elastic Container Registry 서비스를 이용하여 컨테이너 이미지들을 저장할 Image Registry를 등록합니다. 또한 컨테이너를 배포할 ECS 클러스터를 위한 VPC를 생성합니다. 이번 단락에서는 Docker의 기본적인 명령어를 확인 합니다.
+
+0. [Cloud9 접속](https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2#)
 
 1. [Cloud9으로 Docker 기초 실습하기](doc/cloud9-docker-basic.md)
 

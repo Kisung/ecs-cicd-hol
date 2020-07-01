@@ -2,6 +2,22 @@
 
 이 장에서는 가장 기초적인 도커 명령어들을 학습을 해보도록 할 예정입니다. 더 상세한 명령어를 원한다면 [docker 홈페이지](https://docs.docker.com/)에 가서 문서를 참조하시면서 더 상세히 보도록 합니다. 아래의 가이드를 읽어가면서 도커 명령어들을 하나씩 실행을 해보도록 합니다.
 
+## Cloud 9 접속
+1.[링크](https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2#) 를 클릭하여 AWS Cloud9 서비스 페이지에 접속 합니다.
+
+![containerhol cloud9](../images/cloud9/01.cloud9-service.png)
+
+2.미리 생성된 containerhol Environment의 **"Open IDE"** 버튼을 클릭하여 Cloud9 워크스페이스에 접속합니다.
+
+3.워크스페이스 접속이 되면 welcome 탭을 닫고 새로운 터미널을 열어서 개발 환경을 커스터 마이징 합니다.
+
+![Alt](../images/cloud9/c9before.png "cloud9 before")
+
+4.워크스페이스는 아래와 같이 보이게 됩니다.:
+
+![Alt](../images/cloud9/c9after.png "cloud9 afters")
+
+
 ## Dockefile 준비하기
 
 다음의  cloud9의 터미널 창에서 실행하여 Dockerfile을 준비합니다. Dockerfile은 어떤 도커이미지에 대한 청사진이라고 이해를 하시면 됩니다.
