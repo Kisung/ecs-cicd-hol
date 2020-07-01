@@ -112,13 +112,6 @@
     cd ~/environment/containerhol/
     ```
 
-    - git crendential을 저장하기 위하여 다음과 같이 user name과 email을 글로벌로 설정합니다.
-
-    ```bash
-    git config --global user.name "kildong Hong"
-    git config --global user.email "example@amazon.com"
-    ```
-
     - 파일을 추가합니다.
 
     ```bash
