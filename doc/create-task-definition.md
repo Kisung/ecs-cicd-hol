@@ -8,13 +8,15 @@
 
 3. Select compatibilities(호환성 선택) 페이지에서 **EC2**를 선택하고 Next step 버튼을 누릅니다.
 
-4. 화면을 아래로 스크롤 해서 Configure via json 버튼을 누릅니다.
+4. Name은 "hol-webapp" 으로 입력합니다.
+
+5. 화면을 아래로 스크롤 해서 Configure via json 버튼을 누릅니다.
 
     ![Alt](../images/ecs/create-task-definition.png "create task definition")
 
-5. 윈도우즈 혹은 Mac에서 에디터를 열어서 아래의 텍스트를 붙여넣습니다.  YOUR_IMAGE_URI에 앞의 실습에서 생성한 ECR 리포지토리 URI를 입력합니다.
+6. 윈도우즈 혹은 Mac에서 에디터를 열어서 아래의 텍스트를 붙여넣습니다.  YOUR_IMAGE_URI에 앞의 실습에서 생성한 ECR 리포지토리 URI를 입력합니다.
 
-    > **주의: EC2 기반의 클러스터에서 EC2 Launch Type의 Task Definition을 통해 Task를 실행할때는 별도의 task execution 역활을 정의하지 않습니다!!**
+    > **주의: EC2 기반의 클러스터에서 EC2 Launch Type의 Task Definition을 통해 Task를 실행할때는 별도의 task execution Role을 정의하지 않습니다!!**
 
     ```json
     {
@@ -38,7 +40,7 @@
     }
     ```
 
-6. 실제로 잘 작성된 json 파일은 다음과 같습니다. 띄워쓰기 및 쌍따옴표를 생략하지 않도록 주의합니다.
+7. 실제로 잘 작성된 json 파일은 다음과 같습니다. 띄워쓰기 및 쌍따옴표를 생략하지 않도록 주의합니다.
 
    > **image URI를 정확하게 확인하고 입력합니다.**
 
@@ -64,11 +66,11 @@
     }
     ```
 
-7. 팝업창에 위에서 작성한 json 포맷의 파일을 붙여넣고 save 버튼을 누릅니다.
+8. 팝업창에 위에서 작성한 json 포맷의 파일을 붙여넣고 save 버튼을 누릅니다.
 
-8. 정상적으로 json파일이 입력됐다면 Create 버튼을 눌러 task definition을 생성합니다.
+9. 정상적으로 json파일이 입력됐다면 Create 버튼을 눌러 task definition을 생성합니다.
 
-9. 완료가 되면 다음과 같은 화면을 확인할 수 있습니다. 각 항목을 보고 원하는 스펙으로 생성이 됐는지 확인을 해봅니다.
+10. 완료가 되면 다음과 같은 화면을 확인할 수 있습니다. 각 항목을 보고 원하는 스펙으로 생성이 됐는지 확인을 해봅니다.
 
     ![Alt](../images/ecs/result-task-definition.png "create task definition")
 
