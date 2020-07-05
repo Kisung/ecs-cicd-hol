@@ -37,15 +37,15 @@
 
     ![Alt](../images/ecs/view-service-status.png "view service status")
 
-11. Task상태가 확인이 되면 Details 버튼을 눌러 Load Balancing 항목의 Target Group **hol-tg-1** 을 클립합니다.
+11. Task상태가 확인이 되면 Details 탭으로 이동하고, Load Balancing 항목의 Target Group **hol-tg-1** 을 클릭합니다.
 
     ![Alt](../images/ecs/view-service-detail.png "view service detail")
 
-12. Target Group 의 Targets 탭을 눌러서 다음과 같이 **healthy** 상태인 것이 확인을 합니다.
+12. Target Group 의 Targets 탭으로 이동하고, 다음과 같이 **healthy** 상태인 것이 확인을 합니다.
 
     ![Alt](../images/ec2/view-target-status.png "view target status")
 
-13. Target Group의 Description 탭을 눌러서 Load Balacer 항목의 **hol-alb**를 클릭합니다.
+13. Target Group의 Description 탭으로 이동하고, Load Balacer 항목의 **hol-alb**를 클릭합니다.
 
     ![Alt](../images/ec2/view-target-group.png "view target group")
 
