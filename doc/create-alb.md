@@ -22,7 +22,7 @@
     - name: hol-tg-1
     - target type: IP
 
-9. Advanced Health Check Setting를 클릭하고 다음 화면과 같이 입력합니다.
+9. 화면 하단의 Advanced Health Check Setting를 클릭하고 다음 화면과 같이 입력합니다.
     - Healthy threshhold: 3
     - Interval : 6
   
