@@ -44,7 +44,7 @@
 
 4. Add to deploy stage에서는 다음과 같이 입력을 합니다. 나머지는 디폴트로 남겨둡니다.
     - Deploy provider : **Amazon ECS**
-    - Region: **US West - (Oregon)**
+    - Region: **US-east-1 (virginia)**
     - Cluster name: **ContainerHOL**
     - Service name: **hol-webapp-service**
 
