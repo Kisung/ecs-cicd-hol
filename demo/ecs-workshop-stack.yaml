@@ -350,7 +350,7 @@ Resources:
                 - ""
                 - - "arn:"
                   - Ref: AWS::Partition
-                  - ":autoscaling:us-west-2:"
+                  - ":autoscaling:us-east-1:"
                   - Ref: AWS::AccountId
                   - :autoScalingGroup:*:autoScalingGroupName/
                   - Ref: containerholecsDefaultCapacityASG547AEC4A

@@ -22,12 +22,12 @@
 2. Create subnet 화면에서 다음과 같이 입력한 후 Create 버튼을 클릭합니다:
     - Name tag: HolSubnetA
     - VPC: ContainerHol
-    - Availability Zone: us-west-2a
+    - Availability Zone: us-east-1a
     - IPv4 CIDR block: 10.0.0.0/24
 3. Create subnet 화면에서 다음과 같이 입력한 후 Create 버튼을 클릭합니다:
     - Name tag: HolSubnetB
     - VPC: ContainerHol
-    - Availability Zone: us-west-2b
+    - Availability Zone: us-east-1b
     - IPv4 CIDR block: 10.0.1.0/24
 
 ### Route table 설정하기

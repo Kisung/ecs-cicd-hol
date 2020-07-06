@@ -48,7 +48,7 @@
     {
     "containerDefinitions": [{
         "name": "hol-webapp",
-        "image": "01234567890.dkr.ecr.us-west-2.amazonaws.com/containerhol/webapphol",
+        "image": "01234567890.dkr.ecr.us-east-1.amazonaws.com/containerhol/webapphol",
         "essential": true,
         "portMappings": [{
         "hostPort": 80,

@@ -2,7 +2,7 @@
 
 ## buildspec.yaml 추가하기
 
-1. (선택사항) 다음의 링크에서 [https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2](https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2) 에서 **containerhol** 워크스페이스에서 Open IDE 버튼을 눌러 Cloud9 워크스페이스를 누릅니다.
+1. (선택사항) 다음의 링크에서 [https://us-east-1.console.aws.amazon.com/cloud9/home?region=us-east-1](https://us-east-1.console.aws.amazon.com/cloud9/home?region=us-east-1) 에서 **containerhol** 워크스페이스에서 Open IDE 버튼을 눌러 Cloud9 워크스페이스를 누릅니다.
 
 2. 워크스페이스의 터미널 창에서 다음의 명령어를 실행하여 Code commit reposotory를 클론한 디렉토리명을 확인합니다.
 
@@ -79,7 +79,7 @@
           - echo Logging in to Amazon ECR...
           - aws --version
           - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-          - REPOSITORY_URI=<YOUR_ACCOUNT_ID>.dkr.ecr.us-west-2.amazonaws.com/containerhol/webapphol 
+          - REPOSITORY_URI=<YOUR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/containerhol/webapphol 
           - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
           - IMAGE_TAG=${COMMIT_HASH:=latest}
       build:
@@ -102,7 +102,7 @@
 
 9. phases -> pre_build -> commands 의 4번째 라인의 "\<YOUR_ACCOUNT_ID\>" 대신에 본인의 AWS 어카운트 ID를 입력하고 앞에서 생성한 ECR 리포지토리의 주소를 입력합니다. 다음과 같은 형식이 됩니다.
 
-    > "- REPOSITORY_URI=01234567890.dkr.ecr.us-west-2.amazonaws.com/containerhol/webapphol"
+    > "- REPOSITORY_URI=01234567890.dkr.ecr.us-east-1.amazonaws.com/containerhol/webapphol"
 
 10. buildspec 및 Dockerfile 파일을 커밋한 후에 소스 리포지토리에 푸쉬 합니다. 다시 위에서 작업을 하던 Cloud9의 워크스페이스로 돌아와 터미털을 열고 다음을 참조하여 username과 email 주소를 설정합니다.
 
@@ -137,12 +137,12 @@
     Compressing objects: 100% (4/4), done.
     Writing objects: 100% (4/4), 877 bytes | 877.00 KiB/s, done.
     Total 4 (delta 0), reused 0 (delta 0)
-    To https://git-codecommit.us-west-2.amazonaws.com/v1/repos/containerhol
+    To https://git-codecommit.us-east-1.amazonaws.com/v1/repos/containerhol
     * [new branch]      master -> master
     Branch master set up to track remote branch master from origin.
     ```
 
-11. 다음 링크를 통해서 이동하여 정상적으로 푸쉬된 파일들을 확인해 봅니다. [https://us-west-2.console.aws.amazon.com/codesuite/codecommit/repositories?region=us-west-2](https://us-west-2.console.aws.amazon.com/codesuite/codecommit/repositories?region=us-west-2)
+11. 다음 링크를 통해서 이동하여 정상적으로 푸쉬된 파일들을 확인해 봅니다. [https://us-east-1.console.aws.amazon.com/codesuite/codecommit/repositories?region=us-east-1](https://us-east-1.console.aws.amazon.com/codesuite/codecommit/repositories?region=us-east-1)
 
 ## [다음: Cope Pipeline을 생성하여 ECS에 지속적인 배포하기](create-pipeline.md)
 

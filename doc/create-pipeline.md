@@ -66,7 +66,7 @@
 
 ## 파이프라인 테스트하기
 
-1. 다음의 링크로 [https://us-west-2.console.aws.amazon.com/codesuite/codepipeline/pipelines?region=us-west-2](https://us-west-2.console.aws.amazon.com/codesuite/codepipeline/pipelines?region=us-west-2) 이동하여 hol-cicd를 선택하고 오른쪽 상단의 release changes를 선택합니다.
+1. 다음의 링크로 [https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines?region=us-east-1](https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines?region=us-east-1) 이동하여 hol-cicd를 선택하고 오른쪽 상단의 release changes를 선택합니다.
 
     ![Alt](../images/codepipeline/run-release.png "view service status")
 
@@ -74,7 +74,7 @@
 
     ![Alt](../images/codepipeline/view-result.png "view service result")
 
-3. 정상적으로 배포되었다면 [https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#LoadBalancers:sort=loadBalancerName](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#LoadBalancers:sort=loadBalancerName) 에서 hol-alb를 선택한후에 Description 탭의 DNS name을 복사하여 웹 브라우저에 붙여넣고 "Hello World"가 정상적으로 뜨는지 확인합니다.
+3. 정상적으로 배포되었다면 [https://us-east-1.console.aws.amazon.com/ec2/v2/home?region=us-east-1#LoadBalancers:sort=loadBalancerName](https://us-east-1.console.aws.amazon.com/ec2/v2/home?region=us-east-1#LoadBalancers:sort=loadBalancerName) 에서 hol-alb를 선택한후에 Description 탭의 DNS name을 복사하여 웹 브라우저에 붙여넣고 "Hello World"가 정상적으로 뜨는지 확인합니다.
 
 4. 이번에는 구성된 소스 리포지토리에 대한 코드를 변경하고 커밋한 후 변경 사항을 푸시합니다. Cloud9 워크 스페이스에서 왼쪽의 탐색창에서 Dockerfile을 찾아서 더블 클릭하여 편집창을 열고 다음과 같이 수정합니다.
 
@@ -104,7 +104,7 @@
 
 6. 정상적으로 푸쉬가 되었다면 commit hook으로 인하여 Code Pipeline이 자동으로 실행이 됩니다.
 
-7. [https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#LoadBalancers:sort=loadBalancerName](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#LoadBalancers:sort=loadBalancerName) 로 이동하여 hol-alb를 선택한후에 Description 탭의 DNS name을 복사하여 웹 브라우저에 붙여넣고 "Hello World version2 "가 정상적으로 뜨는지 확인합니다.
+7. [https://us-east-1.console.aws.amazon.com/ec2/v2/home?region=us-east-1#LoadBalancers:sort=loadBalancerName](https://us-east-1.console.aws.amazon.com/ec2/v2/home?region=us-east-1#LoadBalancers:sort=loadBalancerName) 로 이동하여 hol-alb를 선택한후에 Description 탭의 DNS name을 복사하여 웹 브라우저에 붙여넣고 "Hello World version2 "가 정상적으로 뜨는지 확인합니다.
 
 실습을 완료하였습니다.
 

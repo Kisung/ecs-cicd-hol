@@ -26,7 +26,7 @@
     > 아래의 명령어를 "$"문자까지 포함하여 그대로 복사해서 Cloud9의 터미널 창에 붙여넣습니다. 키보드 단축키를 사용해서 복사하여 붙여넣습니다.
 
     ```bash
-    $(aws ecr get-login --no-include-email --region us-west-2)
+    $(aws ecr get-login --no-include-email --region us-east-1)
     ```
 
 
@@ -39,19 +39,19 @@
 4. 내려받은 이미지의 tag를 변경합니다. 각자의 ecr 레포지토리 주소에 맞춰서 태그를 변경합니다.
 
     ```bash
-    docker tag nginx:latest xxxxxxxxxxxx.dkr.ecr.us-west-2.amazonaws.com/containerhol/webapphol:latest
+    docker tag nginx:latest xxxxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/containerhol/webapphol:latest
     ```
 
 5. 정상적으로 테그를 생성하였다면 다음과 같은 이미지를 앞에서 생성한 여러분의 ecr 리포지토리에 푸쉬합니다.
 
     ```bash
-    docker push xxxxxxxxxxxx.dkr.ecr.us-west-2.amazonaws.com/containerhol/webapphol:latest
+    docker push xxxxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/containerhol/webapphol:latest
     ```
 
     다음과 같은 메시지가 출력이 되면 정상적으로 ecr 리포지토리에 이미지가 푸쉬된 것입니다.
 
     ```bash
-    The push refers to repository [596560085204.dkr.ecr.us-west-2.amazonaws.com/containerhol/webapphol]
+    The push refers to repository [596560085204.dkr.ecr.us-east-1.amazonaws.com/containerhol/webapphol]
     d7acf794921f: Pushed
     d9569ca04881: Pushed
     cf5b3c6798f7: Pushed

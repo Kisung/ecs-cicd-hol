@@ -12,7 +12,7 @@
 
     - name: hol-alb
     - vpc: ContainerHol
-    - Availability Zones: us-west-2a, us-west-2b 체크
+    - Availability Zones: us-east-1a, us-east-1b 체크
 
 6. Security Group: vpc에 연결된 디폴트 보안 그룹 선택하고 다음으로 넘어갑니다.
 

@@ -18,7 +18,7 @@
 
     ![Alt](../images/codecommit/copy-codecommit-repo-url.png "generate git credential")
 
-5. [Cloud9 대쉬보드 화면으로 이동하여](https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2) 앞에서 생성한 워크스페이스 항목에서 Open IDE 버튼을 눌러 개발환경을 엽니다.
+5. [Cloud9 대쉬보드 화면으로 이동하여](https://us-east-1.console.aws.amazon.com/cloud9/home?region=us-east-1) 앞에서 생성한 워크스페이스 항목에서 Open IDE 버튼을 눌러 개발환경을 엽니다.
 
 6. 사용자의 홈 디렉토리로 아래의 environment로 이동합니다. Cloud9의 터미널에서 아래의 명령어를 실행합니다.
 
@@ -29,7 +29,7 @@
 7. 터미널 화면에서 위의 4에서 복사한 명령어를 붙여넣고 실행합니다.
 
      ```bash
-     git clone https://git-codecommit.us-west-2.amazonaws.com/v1/repos/containerhol
+     git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/containerhol
      ```
 
 8. 정상적으로 입력했다면 다음과 같은 화면을 볼 수 있습니다.

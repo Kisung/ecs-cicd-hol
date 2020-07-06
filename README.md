@@ -23,7 +23,7 @@
 
 CloudFormation 스택을 시작하려면, Launch Stack 버튼 을 클릭해서 CloudFormation 콘솔로 이동합니다.
 
-- [Launch Stack (us-east1-2)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=ecs-hol&templateURL=https://mzc-etc-hol.s3-us-west-2.amazonaws.com/ecs-workshop-stack-us-east-1.yaml)
+- [Launch Stack (us-east-1)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=ecs-hol&templateURL=https://mzc-etc-hol.s3-us-east-1.amazonaws.com/ecs-workshop-stack-us-east-1.yaml)
 
 
 ### Create stack 화면
@@ -68,7 +68,7 @@ ecs-hol 스택의 상세화면으로 전환되고, 스택의 Status가 **CREATE_
 
 이 단락에서는 AWS의 Web IDE인 Cloud9 워크 스페이스를 생성하고 Elastic Container Registry 서비스를 이용하여 컨테이너 이미지들을 저장할 Image Registry를 등록합니다. 또한 컨테이너를 배포할 ECS 클러스터를 위한 VPC를 생성합니다. 이번 단락에서는 Docker의 기본적인 명령어를 확인 합니다.
 
-0. [Cloud9 접속](https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2#)
+0. [Cloud9 접속](https://us-east-1.console.aws.amazon.com/cloud9/home?region=us-east-1#)
 
 1. [Cloud9으로 Docker 기초 실습하기](doc/cloud9-docker-basic.md)
 

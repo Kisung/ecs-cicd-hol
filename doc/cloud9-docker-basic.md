@@ -3,7 +3,7 @@
 이 장에서는 가장 기초적인 도커 명령어들을 학습을 해보도록 할 예정입니다. 더 상세한 명령어를 원한다면 [docker 홈페이지](https://docs.docker.com/)에 가서 문서를 참조하시면서 더 상세히 보도록 합니다. 아래의 가이드를 읽어가면서 도커 명령어들을 하나씩 실행을 해보도록 합니다.
 
 ## Cloud 9 접속
-1.[링크](https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2#) 를 클릭하여 AWS Cloud9 서비스 페이지에 접속 합니다.
+1.[링크](https://us-east-1.console.aws.amazon.com/cloud9/home?region=us-east-1#) 를 클릭하여 AWS Cloud9 서비스 페이지에 접속 합니다.
 
 ![containerhol cloud9](../images/cloud9/01.cloud9-service.png)
 

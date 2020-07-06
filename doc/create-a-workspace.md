@@ -6,7 +6,7 @@
 
 1. 이 실습은 oregon region을 활용해서 이루어 질 것 입니다. 다음의 링크로 이동하여 Cloud9 워크 스페이스를 생성합니다.
 
-    [https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2](https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2)
+    [https://us-east-1.console.aws.amazon.com/cloud9/home?region=us-east-1](https://us-east-1.console.aws.amazon.com/cloud9/home?region=us-east-1)
 
 2. Create environment 버튼을 클릭합니다.
 3. Name 에 containerhol 등과 같은 형식으로 입력합니다. 다른 항목은 디폴트로 내버려둡니다.
