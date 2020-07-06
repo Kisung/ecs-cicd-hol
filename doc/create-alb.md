@@ -1,6 +1,6 @@
 # ECS Service를 위한 Application Load Balacer 생성하기
 
-1. [https://console.aws.amazon.com/ec2/에서](https://console.aws.amazon.com/ec2/에서) Amazon EC2 콘솔을 엽니다.
+1. [https://console.aws.amazon.com/ec2/](https://console.aws.amazon.com/ec2/) 에서 Amazon EC2 콘솔을 엽니다.
 
 2. 왼쪽 탐색 창의 로드 밸런싱에서 Load Balancer( 로드 밸런서 )를 선택합니다.
 
