@@ -1,6 +1,6 @@
 # CICD for ECS Hands On LAB
 
-> **본 Hands on Lab은 Oregon region( us-weat-2 ) 을 기준으로 작성되었습니다. 실습을 하실 때 반드시 리전을 확인하기 바랍니다.**
+> **본 Hands on Lab은 Virginia region( us-east-1 ) 을 기준으로 작성되었습니다. 실습을 하실 때 반드시 리전을 확인하기 바랍니다.**
 
 ## Overall Archtecture
 
